@@ -160,6 +160,10 @@ class PLL_Admin extends PLL_Admin_Base {
 			$this->sync_post_model = new PLL_Sync_Post_Model( $this );
 		}
 
+		if ( class_exists( 'PLL_Admin_Site_Health' ) ) {
+			$this->site_health = new PLL_Admin_Site_Health();
+		}
+
 		// Block editor metabox
 		if ( pll_use_block_editor_plugin() ) {
 			$this->block_editor_plugin = new PLL_Block_Editor_Plugin( $this );
