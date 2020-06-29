@@ -161,7 +161,7 @@ class PLL_Admin extends PLL_Admin_Base {
 		}
 
 		if ( class_exists( 'PLL_Admin_Site_Health' ) ) {
-			$this->site_health = new PLL_Admin_Site_Health();
+			$this->site_health = new PLL_Admin_Site_Health( $this );
 		}
 
 		// Block editor metabox
