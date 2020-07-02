@@ -278,11 +278,11 @@ class PLL_Admin_Filters_Columns {
 			if ( $link = get_edit_term_link( $id, $taxonomy, $post_type ) ) {
 				$flag = '';
 				if ( $id === $term_id ) {
+					$flag = $this->get_flag_html( $language );
 					$class = 'pll_column_flag';
 					/* translators: accessibility text, %s is a native language name */
 					$s = sprintf( __( 'Edit this item in %s', 'polylang' ), $language->name );
 				} else {
-					$flag = $this->get_flag_html( $language );
 					$class = esc_attr( 'pll_icon_edit translation_' . $id );
 					/* translators: accessibility text, %s is a native language name */
 					$s = sprintf( __( 'Edit the translation in %s', 'polylang' ), $language->name );
